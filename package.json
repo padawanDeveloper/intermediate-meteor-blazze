@@ -1,0 +1,14 @@
+{
+  "name": "intermediate",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.36",
+    "bcrypt": "^1.0.3",
+    "install-peers": "^1.0.2",
+    "meteor-node-stubs": "^0.3.2",
+    "simpl-schema": "^1.4.2"
+  }
+}
