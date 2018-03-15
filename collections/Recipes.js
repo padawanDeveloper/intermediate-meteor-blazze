@@ -28,9 +28,26 @@ RecipesSchema = new SimpleSchema({
 	desc: {
 		type: String,
 		label: "Descripción"
-	},
-	ingredients: [IngredientSchema]
-	,
+	},ingredients: {
+    	type: Array,
+  	},
+  	'ingredients.$': {
+    	type: Object
+  	},
+  	'ingredients.$.name': {
+    	type: String
+  	},
+  	'ingredients.$.amount': {
+    	type: String
+  	},
+  	inMenu:{
+  		type: Boolean,
+  		defaultValue: false,
+  		optional: true,
+  		autoform:{
+  			type: "hidden"
+  		}
+  	},
 	author: {
 		type: String,
 		label: "Author",
