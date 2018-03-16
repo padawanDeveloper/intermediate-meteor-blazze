@@ -33,15 +33,19 @@ RecipesSchema = new SimpleSchema({
 		label: "Descripción"
 	},ingredients: {
     	type: Array,
+    	label: "Ingrese los ingredientes"
   	},
   	'ingredients.$': {
-    	type: Object
+    	type: Object,
+    	label:"ingrediente"
   	},
   	'ingredients.$.name': {
-    	type: String
+    	type: String,
+    	label: "Nombre"
   	},
   	'ingredients.$.amount': {
-    	type: String
+    	type: String,
+    	label:"cantidad"
   	},
   	inMenu:{
   		type: Boolean,
@@ -80,6 +84,9 @@ Meteor.methods({
 				inMenu: !currentState
 			}
 		});
+	},
+	deleteRecipe: function(id){
+		Recipes.remove(id);
 	}
 });
 
